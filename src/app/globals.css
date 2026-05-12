@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Inter, Poppins, ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  font-family: var(--font-sans);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.mouse-glow {
+  background:
+    radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 176, 103, 0.15), transparent 18rem),
+    radial-gradient(circle at 70% 20%, rgba(198, 124, 78, 0.08), transparent 22rem);
+}
+
+.map-grid {
+  background-image:
+    linear-gradient(90deg, transparent 0 18px, rgba(255, 255, 255, 0.9) 18px 26px, transparent 26px 90px),
+    linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.9) 18px 26px, transparent 26px 90px);
+  background-size: 86px 86px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
