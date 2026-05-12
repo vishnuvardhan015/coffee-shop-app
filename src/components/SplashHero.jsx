@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+const coffeeSplashImage = `${import.meta.env.BASE_URL}images/coffee_splash.png`;
+
 const SplashHero = ({ onGetStarted }) => {
   return (
     <div className="relative w-full h-[100dvh] bg-black flex flex-col items-center overflow-hidden">
@@ -13,7 +15,7 @@ const SplashHero = ({ onGetStarted }) => {
         className="w-full h-[60%] relative"
       >
         <img 
-          src="/images/coffee_splash.png" 
+          src={coffeeSplashImage} 
           alt="Coffee Splash" 
           className="w-full h-full object-cover object-center"
         />

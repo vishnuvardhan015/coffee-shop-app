@@ -29,6 +29,8 @@ import { CoffeeScene } from '@/components/three/coffee-scene'
 import { categories, coffees, navItems } from '@/constants/coffee'
 import { cn } from '@/lib/utils'
 
+const publicImage = (fileName) => `${import.meta.env.BASE_URL}images/${fileName}`
+
 const navIcons = [Home, Heart, ShoppingBag, Bell]
 
 function Magnetic({ children, className }) {
@@ -88,7 +90,7 @@ function SplashPanel() {
     <section className="relative min-h-[760px] overflow-hidden rounded-[34px] bg-[#080706] px-6 pb-8 pt-5 text-white shadow-[0_35px_120px_rgba(0,0,0,0.6)] md:min-h-[720px] md:px-10">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_45%_25%,rgba(255,176,103,0.22),transparent_26%),linear-gradient(180deg,transparent_30%,#080706_76%)]" />
       <img
-        src="/images/splash-reference.png"
+        src={publicImage('splash-reference.png')}
         alt="Coffee cup with floating beans"
         className="absolute inset-x-0 top-0 h-[62%] w-full object-cover opacity-85"
       />
@@ -183,7 +185,7 @@ function HomePanel() {
         className="relative mx-6 -mt-11 overflow-hidden rounded-2xl bg-[#a98263] px-5 py-4 text-white"
       >
         <img
-          src="/images/home-reference.png"
+          src={publicImage('home-reference.png')}
           alt=""
           className="absolute right-0 top-0 h-full w-1/2 object-cover opacity-55 mix-blend-screen"
         />
@@ -465,7 +467,7 @@ function TrackingPanel() {
         </div>
         <div className="mt-4 flex items-center gap-4">
           <img
-            src="/images/tracking-reference.png"
+            src={publicImage('tracking-reference.png')}
             alt=""
             className="h-14 w-14 rounded-xl object-cover"
           />

@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import caffeMochaImage from '../assets/images/Caffe Mocha.jpeg';
+
+const coffeeSplashImage = `${import.meta.env.BASE_URL}images/coffee_splash.png`;
 
 const CoverPage = ({ onGetStarted }) => (
   <main className="hidden lg:flex fixed inset-0 z-50 overflow-hidden bg-[#131313] text-white">
     <motion.img
-      src="/images/coffee_splash.png"
+      src={coffeeSplashImage}
       alt="Fresh coffee"
       className="absolute inset-0 w-full h-full object-cover"
       initial={{ scale: 1.08 }}
@@ -66,7 +69,7 @@ const CoverPage = ({ onGetStarted }) => (
           className="rounded-[24px] border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-2xl shadow-black/30"
         >
           <img
-            src="/images/Caffe Mocha.jpeg"
+            src={caffeMochaImage}
             alt="Caffe Mocha"
             className="w-full aspect-square rounded-[18px] object-cover mb-5"
           />

@@ -25,6 +25,7 @@ import { categories, coffees, navItems } from './constants/coffee';
 const navIcons = [HomeIcon, Heart, ShoppingBag, Bell];
 
 const fullDescription = `A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk. The foam on top is an essential part of the drink and is created by aerating the milk during the steaming process. The result is a rich, creamy, and well-balanced coffee experience with a smooth texture and a delightful aroma that lingers after every sip.`;
+const coffeeSplashImage = `${import.meta.env.BASE_URL}images/coffee_splash.png`;
 
 const OrderConfirmation = ({ order, onBack, onTrack }) => (
   <motion.main
@@ -335,7 +336,7 @@ function App() {
         >
           <div className="relative flex-1 min-h-[360px]">
             <img
-              src="/images/coffee_splash.png"
+              src={coffeeSplashImage}
               alt="Coffee Splash"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
